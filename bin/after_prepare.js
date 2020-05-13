@@ -9,7 +9,6 @@ module.exports = function (context) {
 
 	platforms.android = require("./lib/android")(context);
 	platforms.ios = require("./lib/ios")(Q, fs, path, require('plist'), require('xcode'));
-	// platforms.browser = require("./lib/browser")(Q, fs, path, req('plist'), req('xcode'));
 
 	return settings.get()
 		.then(function (config) {
